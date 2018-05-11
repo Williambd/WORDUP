@@ -211,11 +211,11 @@ public class WordGameFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void initButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_initButtonActionPerformed
-        Collections.addAll(names, "Rudolph", "Santa");
-        Collections.addAll(verbs, "flew", "crashed");
-        Collections.addAll(adverbs, "quickly", "slowly");
-        Collections.addAll(nouns, "mountain", "snowman");
-        Collections.addAll(adjectives, "huge", "abominable");
+        Collections.addAll(names, "Marlin Brando", "Yoda");
+        Collections.addAll(verbs, "Fired", "Ran");
+        Collections.addAll(adverbs, "Darkly", "Angrily");
+        Collections.addAll(nouns, "mountain", "Scanner");
+        Collections.addAll(adjectives, "odd", "scary");
         initButton.setEnabled(false);
     }//GEN-LAST:event_initButtonActionPerformed
 
@@ -239,19 +239,17 @@ public class WordGameFrame extends javax.swing.JFrame {
 
     private void removeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeButtonActionPerformed
         // Remove the last element from the end of each of the Arrays.
+        removeNames();
+        removeVerbs();
+        removeAdverbs();
+        removeNouns();
+        removeAdjectives();
+        
         names.remove(names.size()-1);
         verbs.remove(verbs.size()-1);
         adverbs.remove(adverbs.size()-1);
         nouns.remove(nouns.size()-1);
         adjectives.remove(adjectives.size()-1);
-
-        // These trace statements have been added to testing purposes.
-        System.out.println("Names: " + names);
-        System.out.println("Verbs: " + verbs);
-        System.out.println("Adverbs: " + adverbs);
-        System.out.println("Nouns: " + nouns);
-        System.out.println("Adjectives: " + adjectives);
-        System.out.println("\n");
     }//GEN-LAST:event_removeButtonActionPerformed
 
     private void verbInputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_verbInputActionPerformed
@@ -316,4 +314,24 @@ public class WordGameFrame extends javax.swing.JFrame {
     private javax.swing.JButton removeButton;
     private javax.swing.JTextField verbInput;
     // End of variables declaration//GEN-END:variables
+
+    private void removeNames() {
+        names.remove(names.size()-1);
+    }
+
+    private void removeVerbs() {
+        verbs.remove(verbs.size()-1);
+    }
+
+    private void removeAdverbs() {
+        adverbs.add(adverbInput.getText());
+    }
+
+    private void removeNouns() {
+        nouns.remove(nouns.size()-1);
+    }
+
+    private void removeAdjectives() {
+        adjectives.remove(adjectives.size()-1);
+    }
 }
